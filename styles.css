@@ -1,0 +1,391 @@
+:root {
+  --paper: #faf7f0;
+  --red: #e2253b;
+  --ink: #111111;
+  --blue: #86a7b8;
+  --gold: #e6b43c;
+  --green: #638b69;
+  --muted: #6f6b65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+  padding: 0 5vw;
+  background: rgba(250, 247, 240, 0.9);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+.brand-mark {
+  color: var(--red);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 68px);
+  background: #0b0b0b;
+  overflow: hidden;
+}
+
+.hero img {
+  height: calc(100vh - 68px);
+  min-height: 620px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.hero-copy {
+  position: absolute;
+  left: 5vw;
+  bottom: 7vw;
+  max-width: 780px;
+  color: var(--paper);
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(58px, 10vw, 150px);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.hero-line {
+  max-width: 620px;
+  margin: 22px 0 0;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.intro-band,
+.image-split,
+.birds-section,
+.packaging-section,
+.social-section,
+.palette-section {
+  padding: 92px 5vw;
+}
+
+.intro-band {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(320px, 1.2fr);
+  gap: 8vw;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+.intro-title span {
+  color: var(--red);
+  font-weight: 900;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(38px, 5.4vw, 92px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.intro-text p,
+.split-copy p,
+.social-copy p,
+.action-list p,
+.bird-card p {
+  line-height: 1.7;
+}
+
+.intro-text {
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 700;
+}
+
+.image-split {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 6vw;
+  align-items: center;
+}
+
+.split-copy p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.split-image img,
+.packaging-grid img,
+.outdoor-section img {
+  border-radius: 8px;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.bird-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.bird-card {
+  min-height: 330px;
+  padding: 26px;
+  background: #fffdf8;
+  border: 1px solid rgba(17, 17, 17, 0.13);
+  border-radius: 8px;
+}
+
+.bird-card span {
+  color: var(--red);
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.bird-card h3 {
+  margin: 42px 0 8px;
+  font-size: 32px;
+}
+
+.latin {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.packaging-section {
+  background: #111;
+  color: var(--paper);
+}
+
+.packaging-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  padding: 16px 2px 0;
+  color: rgba(250, 247, 240, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.social-section {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 0.9fr);
+  gap: 7vw;
+  align-items: start;
+}
+
+.social-copy p {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.action-list {
+  display: grid;
+  gap: 16px;
+}
+
+.action-list div {
+  padding: 24px;
+  background: var(--red);
+  color: var(--paper);
+  border-radius: 8px;
+}
+
+.action-list strong {
+  font-size: 22px;
+}
+
+.action-list p {
+  margin-bottom: 0;
+}
+
+.outdoor-section {
+  position: relative;
+  background: #111;
+}
+
+.outdoor-caption {
+  position: absolute;
+  left: 5vw;
+  bottom: 5vw;
+  max-width: 560px;
+  color: var(--red);
+  font-weight: 900;
+}
+
+.outdoor-caption span {
+  font-size: clamp(42px, 7vw, 96px);
+  line-height: 0.95;
+}
+
+.outdoor-caption p {
+  margin: 18px 0 0;
+  color: var(--paper);
+  font-size: 22px;
+}
+
+.palette-section {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
+  gap: 5vw;
+  align-items: center;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 240px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-radius: 8px;
+}
+
+.swatches span {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 16px 8px;
+  background: var(--c);
+  color: #111;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 38px 5vw;
+  color: var(--paper);
+  background: var(--red);
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  .intro-band,
+  .image-split,
+  .social-section,
+  .palette-section {
+    grid-template-columns: 1fr;
+  }
+
+  .bird-grid,
+  .packaging-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 5vw;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .hero img {
+    min-height: 620px;
+  }
+
+  .intro-band,
+  .image-split,
+  .birds-section,
+  .packaging-section,
+  .social-section,
+  .palette-section {
+    padding: 64px 5vw;
+  }
+
+  .bird-grid,
+  .packaging-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bird-card {
+    min-height: 260px;
+  }
+
+  .swatches {
+    grid-template-columns: 1fr;
+  }
+
+  .swatches span {
+    min-height: 70px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
